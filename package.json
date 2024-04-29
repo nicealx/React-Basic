@@ -5,7 +5,8 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --node-env=production",
+    "dev": "webpack --node-env=development",
+    "prod": "webpack --node-env=production",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --write .",
