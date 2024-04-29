@@ -19,8 +19,8 @@
     }
   },
   "lint-staged": {
-    ".{ts,tsx}": "npm run lint:fix",
-    "*.{ts,tsx,html,css}": "npm run prettier"
+    "**/*.{ts,tsx}": "npm run lint:fix",
+    "**/*.{ts,tsx,html,css}": "npm run prettier"
   },
   "author": "nicealx",
   "license": "ISC",

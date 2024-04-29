@@ -1,6 +1,4 @@
 import React = require('react');
 
-function App() {
-  return <h1>React TypeScript Webpack Starter Template</h1>;
-}
+const App = () => <h1>React TypeScript Webpack Starter Template</h1>;
 export default App;
