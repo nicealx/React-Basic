@@ -3,11 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const EslintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const devTool = devMode ? 'inline-source-map' : undefined;
 const devServer = devMode ? { static: path.resolve(__dirname, './dist') } : undefined;
+const folder = 'build';
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index'),
@@ -35,7 +37,7 @@ module.exports = {
   },
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, './build'),
+    path: path.resolve(__dirname, `./${folder}`),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -47,6 +49,11 @@ module.exports = {
     new EslintPlugin({ extensions: 'ts' }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, './src/images'), to: path.resolve(__dirname, `./${folder}/images`) },
+      ],
     }),
   ],
 };
