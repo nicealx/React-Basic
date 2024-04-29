@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const EslintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const mode = process.env.NODE_ENV;
+const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const devTool = devMode ? 'inline-source-map' : undefined;
 const devServer = devMode ? { static: path.resolve(__dirname, './dist') } : undefined;
