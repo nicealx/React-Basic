@@ -26,7 +26,11 @@
     "class-methods-use-this": "off",
     "@typescript-eslint/no-explicit-any": 2,
     "max-lines-per-function": ["error", 40],
-    "max-len": ["error", { "code": 100 }]
+    "max-len": ["error", { "code": 100 }],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ]
   },
   "overrides": [
     {
