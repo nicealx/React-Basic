@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+}
+
+.App__image {
+  max-width: 100px;
+}

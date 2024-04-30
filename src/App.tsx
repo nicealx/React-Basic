@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './App.module.css';
 
 const App = () => (
-  <div>
+  <div className={styles.App}>
     <h1>React TypeScript Webpack Starter Template</h1>
-    <img style={{ maxWidth: 100 }} src="./images/react.svg" alt="react-logo" />
+    <img className={styles.App__image} src="./images/react.svg" alt="react-logo" />
   </div>
 );
 export default App;
