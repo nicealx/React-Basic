@@ -7,7 +7,7 @@
     "start": "webpack serve",
     "dev": "webpack --node-env=development",
     "prod": "webpack --node-env=production",
-    "lint": "eslint --ext .ts, .tsx",
+    "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --write .",
     "prepare": "husky",
