@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import React = require('react');
+import React from 'react';
 import App from './App';
 
 const root = document.createElement('div');
